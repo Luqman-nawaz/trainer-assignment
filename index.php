@@ -255,167 +255,6 @@
   </section>
   <!--end section-->
   <div class="clearfix"></div>
-  
-  <section>
-    <div class="container shape-bpadding2">
-      <div class="row">
-        <div class="col-sm-12 text-left">
-          <h4 class="section-title-small dark uppercase oswald">Our Best Offers</h4>
-          <h1 class="section-title-3 dark uppercase oswald">Our Pricing</h1>
-          <div class="title-line-3 dark"></div>
-        </div>
-        <div class="clearfix"></div>
-        <div class="col-md-3 col-sm-6 text-center">
-          <div class="pricetable-holder4 bmargin">
-            <div class="inner-holder">
-              <div class="price"><sup>$</sup>9.99</div>
-              <div class="duration oswald">1 Month</div>
-              <br/>
-              <ul class="plan_features">
-                <li>1 GB Bandwidth</li>
-                <li class="highlight">256 MB Memory</li>
-                <li>Free Domain Name</li>
-              </ul>
-              <a class="btn btn-border white-2 btn-round" href="#">Sign Up</a><br/>
-              <br/>
-            </div>
-          </div>
-        </div>
-        <!--end item -->
-        
-        <div class="col-md-3 col-sm-6 text-center">
-          <div class="pricetable-holder4 bmargin">
-            <div class="inner-holder">
-              <div class="price"><sup>$</sup>9.99</div>
-              <div class="duration oswald">1 Month</div>
-              <br/>
-              <ul class="plan_features">
-                <li>1 GB Bandwidth</li>
-                <li class="highlight">256 MB Memory</li>
-                <li>Free Domain Name</li>
-              </ul>
-              <a class="btn btn-border white-2 btn-round" href="#">Sign Up</a><br/>
-              <br/>
-            </div>
-          </div>
-        </div>
-        <!--end item -->
-        
-        <div class="col-md-3 col-sm-6 text-center">
-          <div class="pricetable-holder4 bmargin active">
-            <div class="inner-holder">
-              <div class="price"><sup>$</sup>9.99</div>
-              <div class="duration oswald">1 Month</div>
-              <br/>
-              <ul class="plan_features">
-                <li>1 GB Bandwidth</li>
-                <li class="highlight">256 MB Memory</li>
-                <li>Free Domain Name</li>
-              </ul>
-              <a class="btn btn-border white-2 btn-round" href="#">Sign Up</a><br/>
-              <br/>
-            </div>
-          </div>
-        </div>
-        <!--end item -->
-        
-        <div class="col-md-3 col-sm-6 text-center">
-          <div class="pricetable-holder4 bmargin">
-            <div class="inner-holder">
-              <div class="price"><sup>$</sup>9.99</div>
-              <div class="duration oswald">1 Month</div>
-              <br/>
-              <ul class="plan_features">
-                <li>1 GB Bandwidth</li>
-                <li class="highlight">256 MB Memory</li>
-                <li>Free Domain Name</li>
-              </ul>
-              <a class="btn btn-border white-2 btn-round" href="#">Sign Up</a><br/>
-              <br/>
-            </div>
-          </div>
-        </div>
-        <!--end item --> 
-        
-      </div>
-    </div>
-  </section>
-  <!--end section-->
-  <div class="clearfix"></div>
-  
-  <section class="parallax-section17 section">
-    <div class="bottom-shape2"></div>
-    <div class="section-overlay bg-opacity-7">
-      <div class="container sec-tpadding-4 shape-bpadding2">
-        <div class="row">
-          <div class="col-md-8 col-centered paddtop4"> <br/>
-            <br/>
-            <h1 class="text-white lessmar uppercase oswald"><strong>Group Training Programs</strong></h1>
-            <h3 class="text-white uppercase">Get 40% off on 1year plan</h3>
-            <p class="text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras tellus.
-              In pulvinar lectus a est Curabitur eget orci.</p>
-            <br/>
-            <a class="btn btn-red btn-round" href="#">BOOK NOW</a> </div>
-        </div>
-      </div>
-      <div class="top-shape2 dark"></div>
-    </div>
-  </section>
-  <!--end section-->
-  <div class="clearfix"></div>
-  
-  <section class="section-fulldark">
-    <div class="container shape-bpadding2">
-      <div class="row">
-        <div class="col-sm-12 text-left">
-          <h4 class="section-title-small text-white uppercase oswald">fitness training</h4>
-          <h1 class="section-title-3 text-white uppercase oswald">our classes</h1>
-          <div class="title-line-3"></div>
-        </div>
-        <div class="clearfix"></div>
-        <div class="col-md-3 col-sm-6 text-center bmargin">
-          <div class="iconbox-dxlarge round overflow-hidden"><img src="http://placehold.it/220x220" alt="" class="img-responsive"/></div>
-          <br/>
-          <h4 class="text-white oswald">Group Classes</h4>
-          <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspendisse et justo Praesent mattis.</p>
-        </div>
-        <!--end item-->
-        
-        <div class="col-md-3 col-sm-6 text-center bmargin">
-          <div class="iconbox-dxlarge round overflow-hidden"><img src="http://placehold.it/220x220" alt="" class="img-responsive"/></div>
-          <br/>
-          <h4 class="text-white oswald">Group Classes</h4>
-          <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspendisse et justo Praesent mattis.</p>
-        </div>
-        <!--end item-->
-        
-        <div class="col-md-3 col-sm-6 text-center bmargin">
-          <div class="iconbox-dxlarge round overflow-hidden"><img src="http://placehold.it/220x220" alt="" class="img-responsive"/></div>
-          <br/>
-          <h4 class="text-white oswald">Group Classes</h4>
-          <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspendisse et justo Praesent mattis.</p>
-        </div>
-        <!--end item-->
-        
-        <div class="col-md-3 col-sm-6 text-center bmargin">
-          <div class="feature-box25">
-            <h3 class="text-white oswald">What's Next</h3>
-            <ul class="list">
-              <li><span class="pull-left"> Indoor Cycling </span> <span class="pull-right"> 14.00 - 15.00 </span></li>
-              <li><span class="pull-left"> Swimming </span> <span class="pull-right"> 14.00 - 15.00 </span></li>
-              <li><span class="pull-left"> Group Classes </span> <span class="pull-right"> 14.00 - 15.00 </span></li>
-              <li><span class="pull-left"> Body Building </span> <span class="pull-right"> 14.00 - 15.00 </span></li>
-            </ul>
-          </div>
-        </div>
-        <!--end item--> 
-        
-      </div>
-    </div>
-    <div class="bottom-shape3"></div>
-  </section>
-  <!--end section-->
-  <div class="clearfix"></div>
   <section class="sec-tpadding">
     <div class="container shape-bpadding2">
       <div class="row">
@@ -453,27 +292,14 @@
               justo Praesent mattis.</p>
           </div>
         </div>
-        <!--end item-->
-        
+
         <div class="col-md-3 col-sm-6">
-          <h4 class="uppercase oswald">Booking</h4>
           <div class="feature-box26 bmargin">
-            <form>
-              <select>
-                <option>Choose Program</option>
-                <option> Indoor Cycling </option>
-                <option>Dance Classes</option>
-                <option> Group Exercise </option>
-                <option>Personal Training</option>
-                <option> Yoga </option>
-                <option>Children’s Dance Classes</option>
-              </select>
-              <input class="input" type="text" name="" value="Date">
-              <input class="input" type="text" name="" value="Email">
-            </form>
-            <br/>
-            <br/>
-            <a class="btn btn-red btn-round" href="#">Book now</a> </div>
+            <div class="img-holder"><img src="http://placehold.it/250x200" alt="" class="img-responsive"/></div>
+            <h5 class="oswald">Benjamin</h5>
+            <p>Lorem ipsum dolor sit amet consectetuer adipiscing Suspendisse et
+              justo Praesent mattis.</p>
+          </div>
         </div>
         <!--end item--> 
       </div>
