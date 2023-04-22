@@ -19,7 +19,7 @@
 			//checking inputs
     			if(empty($_POST['email']) OR empty($_POST['userpass']) OR empty($_POST['name']) OR empty($_POST['userimage'])){
 
-    				header("location:register.php?empty");
+    				header("location:register.php?err=Empty Details");
 
     			}
 			
@@ -30,7 +30,7 @@
 			//games table
             $email = $_POST['email'];
 
-			$password = $_POST['userpass'];
+            $password = password_hash($_POST['userpass'], PASSWORD_BCRYPT);
 
 			$name = $_POST['name'];
 
@@ -59,7 +59,7 @@
 
 		    if(!mysqli_stmt_prepare($statement, $q)){
 
-		    	header("location:add-a-class.php?error=Class could not be added!");
+		    	header("location:register.php?err=Some serious error occured!");
 
 		    	die();
 
@@ -67,15 +67,13 @@
 
 		    mysqli_stmt_bind_param($statement, "ssssss", $email, $password, $name, $newfilename, $created_at, $updated_at);
 
-		    if(!mysqli_stmt_execute($statement)){
+		    if(mysqli_stmt_execute($statement)){
 
-		        header('location:add-a-class.php?error=Class Could not be added!');
-
-		        die();
+		        header('location:login.php?done=Registered Sucessfully, Please Login!');
 
 		    }else{
 
-                header("location:mg-classes.php?done=Class Added Successfully");
+                header("location:register.php?err=Failed to register");
 
             }
 

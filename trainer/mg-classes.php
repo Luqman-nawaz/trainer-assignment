@@ -35,26 +35,9 @@ session_start();
 		        </div>
 
 	     	</div>
-
-	        <?php
-
-        if(isset($_GET['err'])){
-
-        ?>
-
-      <div class="alert alert-warning" style="text-align: center;"> Some Error occured </div>
-
-      <?php } ?>
-
-              <?php
-
-        if(isset($_GET['done'])){
-
-        ?>
-
-      <div class="alert alert-success" style="text-align: center;"> Admin Removed Sucessfully </div>
-
-      <?php } ?>
+			
+	  		  <?php if(isset($_GET['err'])){ ?> <div class="alert alert-success" style="text-align: center;"> <?= $_GET['err']; ?> </div> <?php } ?>
+              <?php if(isset($_GET['done'])){ ?> <div class="alert alert-success" style="text-align: center;"> <?= $_GET['done']; ?> </div> <?php } ?>
 
 		    <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
 

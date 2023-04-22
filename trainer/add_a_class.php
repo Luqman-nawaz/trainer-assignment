@@ -52,7 +52,7 @@
 
 			//processing image with name convert to microseconds
 
-			$uploaddir = "../images/classes";
+			$uploaddir = "../images/classes/";
 
 		    $temp = explode(".", $_FILES["featured_image"]["name"]);
 

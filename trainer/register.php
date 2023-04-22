@@ -78,9 +78,9 @@ position:absolute;
 
             <br>
 
-            <?php if(isset($_GET['err'])){ ?><div class="alert alert-danger" style="text-align: center;"><i class="fas fa-exclamation-triangle"></i>&nbsp;Wrong Username or Password</div><?php } ?>
+            <?php if(isset($_GET['err'])){ ?><div class="alert alert-danger" style="text-align: center;"><i class="fas fa-exclamation-triangle"></i>&nbsp;<?= $_GET['err']; ?></div><?php } ?>
 
-            <form action="login_validate.php" method="post" style="padding-top: 30px;">
+            <form action="register_trainer.php" enctype="multipart/form-data" method="post" style="padding-top: 30px;">
 
               <div class="row">
 

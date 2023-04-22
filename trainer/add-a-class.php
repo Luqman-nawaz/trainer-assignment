@@ -57,7 +57,7 @@ session_start();
 
           <div class="container">
 
-            <form action="add_a_class.php" method="post">
+            <form action="add_a_class.php" enctype="multipart/form-data" method="post">
 
               <div class="form-row">
 
