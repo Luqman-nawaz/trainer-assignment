@@ -2,7 +2,7 @@
 
 session_start();
 
-  if($_SESSION['email'] && $_SESSION['userpass']){
+  if($_SESSION['useremail'] && $_SESSION['userpassword']){
 
     include_once 'vendor/includes/head.php';
 

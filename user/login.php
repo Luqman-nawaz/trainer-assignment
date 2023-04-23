@@ -79,7 +79,7 @@ position:absolute;
             <br>
 
             <?php if(isset($_GET['err'])){ ?><div class="alert alert-danger" style="text-align: center;"><i class="fas fa-exclamation-triangle"></i>&nbsp;Wrong Username or Password</div><?php } ?>
-            <?php if(isset($_GET['done'])){ ?><div class="alert alert-success" style="text-align: center;"><i class="fas fa-exclamation-triangle"></i>&nbsp;<?= $_GET['dome']; ?></div><?php } ?>
+            <?php if(isset($_GET['done'])){ ?><div class="alert alert-success" style="text-align: center;"><i class="fas fa-exclamation-triangle"></i>&nbsp;<?= $_GET['done']; ?></div><?php } ?>
 
             <form action="login_validate.php" method="post" style="padding-top: 30px;">
 

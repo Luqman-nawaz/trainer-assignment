@@ -116,9 +116,9 @@
 
       <div class="list-group list-group-flush">
 
-        <a href="add-a-class.php" class="list-group-item list-group-item-action waves-effect">
+        <a href="../" class="list-group-item list-group-item-action waves-effect">
 
-          <i class="fas fa-users-cog"></i> &nbsp; Add Class</a>
+          <i class="fas fa-users-cog"></i> &nbsp; Find Classes</a>
 
         <a href="mg-classes.php" class="list-group-item list-group-item-action waves-effect">
 
@@ -131,8 +131,6 @@
         <a href="mg-account.php" class="list-group-item list-group-item-action waves-effect">
 
           <i class="fas fa-book"></i> &nbsp; Manage Account</a>
-
-          
 
         <a href="logout.php" class="list-group-item list-group-item-action waves-effect">
 

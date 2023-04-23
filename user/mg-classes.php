@@ -2,7 +2,7 @@
 
 session_start();
 
-  if($_SESSION['email'] && $_SESSION['userpass']){
+  if($_SESSION['useremail'] && $_SESSION['userpassword']){
 
     include_once 'vendor/includes/head.php';
 
@@ -36,25 +36,8 @@ session_start();
 
 	     	</div>
 
-	        <?php
-
-        if(isset($_GET['err'])){
-
-        ?>
-
-      <div class="alert alert-warning" style="text-align: center;"> Some Error occured </div>
-
-      <?php } ?>
-
-              <?php
-
-        if(isset($_GET['done'])){
-
-        ?>
-
-      <div class="alert alert-success" style="text-align: center;"> Admin Removed Sucessfully </div>
-
-      <?php } ?>
+			 <?php if(isset($_GET['err'])){ ?> <div class="alert alert-success" style="text-align: center;"> <?= $_GET['err']; ?> </div> <?php } ?>
+              <?php if(isset($_GET['done'])){ ?> <div class="alert alert-success" style="text-align: center;"> <?= $_GET['done']; ?> </div> <?php } ?>
 
 		    <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
 
@@ -78,13 +61,13 @@ session_start();
 
 			  	<?php
 
-                $email = $_SESSION['email'];
-                $q_user_id = "SELECT * FROM `trainers` WHERE `email` = '$email'";
+                $email = $_SESSION['useremail'];
+                $q_user_id = "SELECT * FROM `users` WHERE `email` = '$email'";
                 $r_user_id = mysqli_query($con, $q_user_id);
                 $re_user_id = mysqli_fetch_assoc($r_user_id);
                 $user_id = $re_user_id['id'];
 
-			  	$q = "SELECT * FROM `trainer_classes` WHERE `trainer_id` = '$user_id'";
+			  	$q = "SELECT * FROM `user_classes` INNER JOIN `trainer_classes` ON `trainer_classes`.id = `user_classes`.class_id WHERE `user_id` = '$user_id'";
 
 			  	$r = mysqli_query($con, $q);
 
@@ -96,7 +79,7 @@ session_start();
 
 			      <td><?php echo $re['class_name']; ?></td>
 
-			      <td><a href="remove_class.php?id=<?php echo $re['id']; ?>"><button class="btn btn-danger btn-sm">Remove</button></td>
+			      <td><a href="remove_class.php?id=<?php echo $re['id']; ?>&userid=<?= $user_id; ?>"><button class="btn btn-danger btn-sm">Remove</button></td>
 
 			    </tr>
 

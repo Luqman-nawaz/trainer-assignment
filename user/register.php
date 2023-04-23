@@ -12,7 +12,7 @@
 
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>Trainer Panel</title>
+  <title>User Panel</title>
 
   <!-- Font Awesome -->
 
@@ -80,7 +80,7 @@ position:absolute;
 
             <?php if(isset($_GET['err'])){ ?><div class="alert alert-danger" style="text-align: center;"><i class="fas fa-exclamation-triangle"></i>&nbsp;<?= $_GET['err']; ?></div><?php } ?>
 
-            <form action="register_trainer.php" method="post" style="padding-top: 30px;">
+            <form action="register_user.php" method="post" enctype="multipart/form-data" style="padding-top: 30px;">
 
               <div class="row">
 

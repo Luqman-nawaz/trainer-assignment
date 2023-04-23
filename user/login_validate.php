@@ -58,9 +58,9 @@
 
 			session_start();
 
-			$_SESSION['email'] = $email;
+			$_SESSION['useremail'] = $email;
 
-			$_SESSION['userpass'] = $userpass;
+			$_SESSION['userpassword'] = $userpass;
 
 			header("location:index.php?done");
 

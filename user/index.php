@@ -2,7 +2,7 @@
 
 session_start();
 
-  if($_SESSION['email'] && $_SESSION['userpass']){
+  if($_SESSION['useremail'] && $_SESSION['userpassword']){
 
     require_once 'vendor/includes/config.php';
 
@@ -81,8 +81,17 @@ session_start();
       <div class="row">
 
           <?php
+          $email = $_SESSION['useremail'];
 
-          $q = "SELECT * FROM `games` WHERE `status` = 1 ORDER BY id DESC LIMIT 6;";
+          $q_user_id = "SELECT * FROM `users` WHERE `email` = '$email'";
+          
+          $r_user_id = mysqli_query($con, $q_user_id);
+          
+          $re_user_id = mysqli_fetch_assoc($r_user_id);
+          
+          $user_id = $re_user_id['id'];
+
+          $q = "SELECT * FROM `user_classes` INNER JOIN `trainer_classes` ON `trainer_classes`.id = `user_classes`.class_id WHERE `user_id` = '$user_id' LIMIT 6;";
 
           $r = mysqli_query($con, $q);
 
@@ -98,9 +107,9 @@ session_start();
 
             <!-- Card image -->
 
-                <a href="https://gamewrap.net/post/<?php echo $re['slug']; ?>" class="btn btn-primary" target="_blank">
+                <a href="#" class="btn btn-primary" target="_blank">
 
-              <img class="card-img-top" src="https://gamewrap.net/images/<?php echo $re['featured_image']; ?>"
+              <img class="card-img-top" src="../images/classes/<?php echo $re['class_picture']; ?>"
 
                 alt="Card image cap">
 
@@ -116,15 +125,11 @@ session_start();
 
               <!-- Title -->
 
-              <h4 class="card-title"><?php echo $re['name']; ?></h4>
-
-              <!-- Text -->
-
-              <p class="card-text"><?php echo $re['description']; ?></p>
+              <h4 class="card-title"><?php echo $re['class_name']; ?></h4>
 
               <!-- Button -->
 
-              <a href="https://gamewrap.net/game/<?php echo $re['slug']; ?>" class="btn btn-primary" target="_blank">View Post</a>
+              <a href="#" class="btn btn-primary" target="_blank">View Class</a>
 
 
 

@@ -31,8 +31,9 @@
         <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
           <ul class="nav red navbar-nav">
             <li> <a href="index.php" class="dropdown-toggle active">Home</a></li>
-            <li> <a href="index.php" class="dropdown-toggle active">Trainer's Classes</a></li>
-            <li> <a href="contact.php" class="dropdown-toggle">User Registration</a></li>
+            <li> <a href="classes.php" class="dropdown-toggle">Trainer's Classes</a></li>
+            <li> <a href="user/register.php" class="dropdown-toggle">User Registration</a></li>
+            <li> <a href="user/login.php" class="dropdown-toggle">User Login</a></li>
           </ul>
         </div>
       </div>

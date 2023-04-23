@@ -2,17 +2,17 @@
 
     session_start();
 
-    if($_SESSION['email'] && $_SESSION['userpass']){
+    if($_SESSION['useremail'] && $_SESSION['userpassword']){
 
 	require_once 'vendor/includes/config.php';
 
 	if(!$_SERVER['REQUEST_METHOD'] == 'POST'){
 
-	header("location:logout.php");
+		header("location:logout.php");
 
 	}
 
-	$email = $_SESSION['email'];
+	$email = $_SESSION['useremail'];
 
 	$currentpass = mysqli_real_escape_string($con, $_POST['currentpass']);
 
@@ -20,7 +20,7 @@
 
 	$password = password_hash($newpass, PASSWORD_BCRYPT);
 
-	$q = "SELECT * FROM `trainers` WHERE `email` = '$email'";
+	$q = "SELECT * FROM `users` WHERE `email` = '$email'";
 
 	$r = mysqli_query($con, $q);
 
@@ -30,23 +30,21 @@
 
 		if(password_verify($currentpass, $hash)){
 
-		$q_change = "UPDATE `trainers` set `password` = '$password' WHERE `email` = '$email'";
+			$q_change = "UPDATE `users` set `password` = '$password' WHERE `email` = '$email'";
 
-		$r_change = mysqli_query($con, $q_change);
+			$r_change = mysqli_query($con, $q_change);
 
-		if($r_change){
+			if($r_change){
 
-			header("location:logout.php");
+				header("location:logout.php");
 
-		}else{
+			}else{
 
-			header("location:mg-account.php?err");
+				header("location:mg-account.php?err");
 
-		
+			
 
-		}
-
-		
+			}
 
 		}else{
 

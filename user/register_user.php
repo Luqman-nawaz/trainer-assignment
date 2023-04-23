@@ -42,7 +42,7 @@
 
 			//processing image with name convert to microseconds
 
-			$uploaddir = "../images/trainers/";
+			$uploaddir = "../images/users";
 
 		    $temp = explode(".", $_FILES["featured_image"]["name"]);
 
@@ -53,7 +53,7 @@
 		    move_uploaded_file($_FILES["featured_image"]["tmp_name"], $uploaddir . $newfilename);
 
 			
-            $q = "INSERT INTO `trainers` (`email`, `password`, `name`, `profile_picture`, `created_at`, `updated_at`) VALUES (?,?,?,?,?,?);";
+            $q = "INSERT INTO `users` (`email`, `password`, `name`, `profile_picture`, `created_at`, `updated_at`) VALUES (?,?,?,?,?,?);";
 
 		    $statement = mysqli_stmt_init($con);
 
@@ -67,10 +67,9 @@
 
 		    mysqli_stmt_bind_param($statement, "ssssss", $email, $password, $name, $newfilename, $created_at, $updated_at);
 
-		    if(!mysqli_stmt_execute($statement)){
+		    if(mysqli_stmt_execute($statement)){
 
 		        header('location:login.php?done=Registered Sucessfully, Please Login!');
-
 
 		    }else{
 

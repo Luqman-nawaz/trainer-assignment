@@ -11,26 +11,18 @@
 	require_once 'vendor/includes/config.php';
 
 	$id = mysqli_real_escape_string($con, $_GET['id']);
+	
+	$userid = $_GET['userid'];
 
-	$q = "DELETE FROM `trainer_classes` WHERE `id` = ?;";
+	$q = "DELETE FROM `user_classes` WHERE `user_id` = '$userid' && `class_id` = '$id';";
 
-	$statement = mysqli_stmt_init($con);
+	if(mysqli_query($con, $q)){
 
-	if(!mysqli_stmt_prepare($statement, $q)){
-
-		header("location:mg-classes.php?err");
-
-	}
-
-	mysqli_stmt_bind_param($statement, "i", $id);
-
-	if(mysqli_stmt_execute($statement)){
-
-		header("location:mg-classes.php?rdone");
+		header("location:mg-classes.php?done=Class Removed Successfully");
 
 	}else{
 
-		header("location:mg-classes.php?err");
+		header("location:mg-classes.php?err=Could not remove class");
 
 	}
 
