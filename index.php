@@ -1,3 +1,7 @@
+<?php 
+session_start();
+require_once 'vendor/includes/config.php'; ?>
+
 <!doctype html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
@@ -17,6 +21,12 @@
   <!-- masterslider -->
   <div class="master-slider ms-skin-default" id="masterslider"> 
     
+
+    <?php
+      $q_slider = "SELECT *, trainer_classes.`id` as classid FROM `trainer_classes` INNER JOIN `trainers` ON `trainer_classes`.trainer_id = `trainers`.id LIMIT 6";
+      $r = mysqli_query($con, $q_slider);
+      while($re = mysqli_fetch_assoc($r)){
+    ?>
     <!-- slide 1 -->
     <div class="ms-slide slide-1" data-delay="9">
       <div class="slide-pattern"></div>
@@ -28,7 +38,7 @@
 			data-delay="500"
 			data-ease="easeOutExpo"
 			data-duration="1230"
-			data-effect="left(250)"> Be an</h3>
+			data-effect="left(250)"></h3>
             
       <h3 class="ms-layer text16"
 			style="top: 320px; left:225px;"
@@ -36,7 +46,7 @@
 			data-delay="1000"
 			data-ease="easeOutExpo"
 			data-duration="1230"
-			data-effect="right(250)"> inspiration</h3>
+			data-effect="right(250)"> <?= $re['class_name']; ?></h3>
             
       <h3 class="ms-layer text17"
         	style="top: 370px; left:225px;"
@@ -44,10 +54,10 @@
             data-effect="top(45)"
             data-duration="2000"
             data-delay="1500"
-            data-ease="easeOutExpo"> Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspendisse et justo <br />
-        Praesent mattis commodo augue Aliquam ornare. </h3>
+            data-ease="easeOutExpo"> Class By <?= $re['name']; ?> </h3>
         
-      <a class="ms-layer sbut6"
+      <a href="book_class.php?classid=<?= $re['classid']; ?>" 
+      class="ms-layer sbut6"
 			style="left: 225px; top: 460px;"
 			data-type="text"
 			data-delay="2000"
@@ -58,85 +68,7 @@
             </div>
     <!-- end slide 1 --> 
     
-    <!-- slide 2 -->
-    <div class="ms-slide slide-2" data-delay="9">
-      <div class="slide-pattern"></div>
-      <img src="js/masterslider/blank.gif" data-src="http://placehold.it/1920x865" alt=""/>
-      
-      <h3 class="ms-layer text15"
-			style="top: 270px; left:225px;"
-			data-type="text"
-			data-delay="500"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="left(250)"> Be an</h3>
-            
-      <h3 class="ms-layer text16"
-			style="top: 320px; left:225px;"
-			data-type="text"
-			data-delay="1000"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="right(250)"> inspiration</h3>
-            
-      <h3 class="ms-layer text17"
-        	style="top: 370px; left:225px;"
-            data-type="text"
-            data-effect="top(45)"
-            data-duration="2000"
-            data-delay="1500"
-            data-ease="easeOutExpo"> Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspendisse et justo <br />
-        Praesent mattis commodo augue Aliquam ornare. </h3>
-        
-      <a class="ms-layer sbut6"
-			style="left: 225px; top: 460px;"
-			data-type="text"
-			data-delay="2000"
-			data-ease="easeOutExpo"
-			data-duration="1200"
-			data-effect="left(250)"> Book now </a> 
-            </div>
-    <!-- end slide 2 -->
-    
-    <!-- slide 3 -->
-    <div class="ms-slide slide-3" data-delay="9">
-      <div class="slide-pattern"></div>
-      <img src="js/masterslider/blank.gif" data-src="http://placehold.it/1920x865" alt=""/>
-      
-      <h3 class="ms-layer text15"
-			style="top: 270px; left:225px;"
-			data-type="text"
-			data-delay="500"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="left(250)"> Be an</h3>
-            
-      <h3 class="ms-layer text16"
-			style="top: 320px; left:225px;"
-			data-type="text"
-			data-delay="1000"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="right(250)"> inspiration</h3>
-            
-      <h3 class="ms-layer text17"
-        	style="top: 370px; left:225px;"
-            data-type="text"
-            data-effect="top(45)"
-            data-duration="2000"
-            data-delay="1500"
-            data-ease="easeOutExpo"> Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspendisse et justo <br />
-        Praesent mattis commodo augue Aliquam ornare. </h3>
-        
-      <a class="ms-layer sbut6"
-			style="left: 225px; top: 460px;"
-			data-type="text"
-			data-delay="2000"
-			data-ease="easeOutExpo"
-			data-duration="1200"
-			data-effect="left(250)"> Book now </a> 
-            </div>
-    <!-- end slide 3 -->
+    <?php } ?>
     
     
     

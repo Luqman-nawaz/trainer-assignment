@@ -10,7 +10,7 @@
       
       <div class="topbar-right-items pull-right">
         <ul class="toplist toppadding">
-          <li class="lineright"><a href="trainer/index.php">Trainer Login</a></li>
+          <li class="lineright"><a href="trainer/index.php">Trainer Dashboard</a></li>
           <li class="lineright"><a href="trainer/register.php">Trainer Registration</a></li>
           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
