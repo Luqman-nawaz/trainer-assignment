@@ -87,27 +87,21 @@ require_once 'vendor/includes/config.php'; ?>
         <div class="col-md-3 text-center">
           <div class="iconbox-xlarge no-lineheight white-outline round"><img src="images/127.png" alt=""/></div>
           <br/>
-          <h4 class="text-white uppercase oswald">body building</h4>
-          <p class="text-white">Lorem ipsum dolor sit amet, sit et 
-            justoconsectetuer adipiscing elit. Suspendisse et justo. </p>
+          <h4 class="text-white uppercase oswald">body building classes</h4>
         </div>
         <!--end item-->
         
         <div class="col-md-3 text-center">
           <div class="iconbox-xlarge no-lineheight white-outline round"><img src="images/128.png" alt=""/></div>
           <br/>
-          <h4 class="text-white uppercase oswald">Cycling Classes</h4>
-          <p class="text-white">Lorem ipsum dolor sit amet, sit et 
-            justoconsectetuer adipiscing elit. Suspendisse et justo. </p>
+          <h4 class="text-white uppercase oswald">Live Cardio Exercises</h4>
         </div>
         <!--end item-->
         
         <div class="col-md-3 text-center">
           <div class="iconbox-xlarge no-lineheight white-outline round"><img src="images/129.png" alt=""/></div>
           <br/>
-          <h4 class="text-white uppercase oswald">equipments</h4>
-          <p class="text-white">Lorem ipsum dolor sit amet, sit et 
-            justoconsectetuer adipiscing elit. Suspendisse et justo. </p>
+          <h4 class="text-white uppercase oswald">Latest methodology</h4>
         </div>
         <!--end item-->
         
@@ -115,223 +109,13 @@ require_once 'vendor/includes/config.php'; ?>
           <div class="iconbox-xlarge no-lineheight white-outline round"><img src="images/127.png" alt=""/></div>
           <br/>
           <h4 class="text-white uppercase oswald">Personal Training</h4>
-          <p class="text-white">Lorem ipsum dolor sit amet, sit et 
-            justoconsectetuer adipiscing elit. Suspendisse et justo. </p>
         </div>
         <!--end item--> 
         
       </div>
     </div>
   </section>
-  <!--end section-->
-  <div class="clearfix"></div>
-  
-  <section class="parallax-section16 section">
-    <div class="bottom-shape1"></div>
-    <div class="section-overlay bg-opacity-7">
-      <div class="container sec-tpadding-4 shape-bpadding2">
-        <div class="row"> <br/>
-          <br/>
-          <div class="col-sm-12 text-left">
-            <h4 class="section-title-small text-white uppercase oswald">Our History</h4>
-            <h1 class="section-title-3 text-white uppercase oswald">About Us</h1>
-            <div class="title-line-3"></div>
-          </div>
-          <div class="clearfix"></div>
-          <div class="col-md-4 col-sm-6">
-            <div class="feature-box24 bmargin">
-              <div class="inner">
-                <h4 class="text-white uppercase oswald">our History</h4>
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue.</p>
-                <br/>
-                <a class="but" href="#">Read more</a> </div>
-              <div class="image-holder">
-                <div class="overlay"></div>
-                <img src="http://placehold.it/400x450" alt="" class="img-responsive"/> </div>
-            </div>
-          </div>
-          <!--end item -->
-          
-          <div class="col-md-4 col-sm-6">
-            <div class="feature-box24 bmargin">
-              <div class="inner">
-                <h4 class="text-white uppercase oswald">our Training</h4>
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue.</p>
-                <br/>
-                <a class="but" href="#">Read more</a> </div>
-              <div class="image-holder">
-                <div class="overlay"></div>
-                <img src="http://placehold.it/400x450" alt="" class="img-responsive"/> </div>
-            </div>
-          </div>
-          <!--end item -->
-          
-          <div class="col-md-4 col-sm-6">
-            <div class="feature-box24 bmargin">
-              <div class="inner">
-                <h4 class="text-white uppercase oswald">our Classes</h4>
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue.</p>
-                <br/>
-                <a class="but" href="#">Read more</a> </div>
-              <div class="image-holder">
-                <div class="overlay"></div>
-                <img src="http://placehold.it/400x450" alt="" class="img-responsive"/> </div>
-            </div>
-          </div>
-          <!--end item --> 
-          
-        </div>
-      </div>
-      <div class="top-shape2"></div>
-    </div>
-  </section>
-  <!--end section-->
-  <div class="clearfix"></div>
-  <section class="sec-tpadding">
-    <div class="container shape-bpadding2">
-      <div class="row">
-        <div class="col-sm-12 text-left">
-          <h4 class="section-title-small dark uppercase oswald">our best trainers</h4>
-          <h1 class="section-title-3 dark uppercase oswald">Our Team</h1>
-          <div class="title-line-3 dark"></div>
-        </div>
-        <div class="clearfix"></div>
-        <div class="col-md-3 col-sm-6">
-          <div class="feature-box26 bmargin">
-            <div class="img-holder"><img src="http://placehold.it/250x200" alt="" class="img-responsive"/></div>
-            <h5 class="oswald">William</h5>
-            <p>Lorem ipsum dolor sit amet consectetuer adipiscing Suspendisse et
-              justo Praesent mattis.</p>
-          </div>
-        </div>
-        <!--end item-->
-        
-        <div class="col-md-3 col-sm-6">
-          <div class="feature-box26 bmargin">
-            <div class="img-holder"><img src="http://placehold.it/250x200" alt="" class="img-responsive"/></div>
-            <h5 class="oswald">Madison</h5>
-            <p>Lorem ipsum dolor sit amet consectetuer adipiscing Suspendisse et
-              justo Praesent mattis.</p>
-          </div>
-        </div>
-        <!--end item-->
-        
-        <div class="col-md-3 col-sm-6">
-          <div class="feature-box26 bmargin">
-            <div class="img-holder"><img src="http://placehold.it/250x200" alt="" class="img-responsive"/></div>
-            <h5 class="oswald">Benjamin</h5>
-            <p>Lorem ipsum dolor sit amet consectetuer adipiscing Suspendisse et
-              justo Praesent mattis.</p>
-          </div>
-        </div>
 
-        <div class="col-md-3 col-sm-6">
-          <div class="feature-box26 bmargin">
-            <div class="img-holder"><img src="http://placehold.it/250x200" alt="" class="img-responsive"/></div>
-            <h5 class="oswald">Benjamin</h5>
-            <p>Lorem ipsum dolor sit amet consectetuer adipiscing Suspendisse et
-              justo Praesent mattis.</p>
-          </div>
-        </div>
-        <!--end item--> 
-      </div>
-    </div>
-  </section>
-  <!--end section-->
-  <div class="clearfix"></div>
-  <section class="parallax-section18 section">
-    <div class="bottom-shape4"></div>
-    <div class="section-overlay bg-opacity-7">
-      <div class="container sec-tpadding-4 shape-bpadding2">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="col-sm-12 text-left">
-              <h4 class="section-title-xsmall text-white uppercase nomargin oswald">best programs</h4>
-              <h2 class="section-title-3 small text-white uppercase oswald">get with the programe</h2>
-              <div class="title-line-3"></div>
-            </div>
-            <div class="clearfix"></div>
-            <div id="owl-demo2" class="owl-carousel">
-              <div class="item">
-                <div class="feature-box24 two bmargin">
-                  <div class="inner">
-                    <h4 class="text-white uppercase oswald">our training</h4>
-                    <p class="text-light">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo Praesent mattis commodo augue Aliquam ornare hendrerit augue Suspendisse et justo. Praesent mattis.</p>
-                    <br/>
-                    <a class="btn btn-red lesspadd btn-round" href="#">Sign Up</a> </div>
-                  <div class="image-holder">
-                    <div class="overlay"></div>
-                    <img src="http://placehold.it/600x350" alt="" class="img-responsive"/> </div>
-                </div>
-                <!--end item --> 
-              </div>
-              <!--end slide item-->
-              
-              <div class="item">
-                <div class="feature-box24 two bmargin">
-                  <div class="inner">
-                    <h4 class="text-white uppercase oswald">our training</h4>
-                    <p class="text-light">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo Praesent mattis commodo augue Aliquam ornare hendrerit augue Suspendisse et justo. Praesent mattis.</p>
-                    <br/>
-                    <a class="btn btn-red lesspadd btn-round" href="#">Read more</a> </div>
-                  <div class="image-holder">
-                    <div class="overlay"></div>
-                    <img src="http://placehold.it/600x350" alt="" class="img-responsive"/> </div>
-                </div>
-                <!--end item --> 
-              </div>
-              <!--end slide item--> 
-            </div>
-          </div>
-          <!--end item-->
-          
-          <div class="col-md-6">
-            <div class="col-sm-12 text-left">
-              <h4 class="section-title-xsmall text-white uppercase nomargin oswald">our clients</h4>
-              <h2 class="section-title-3 small text-white uppercase oswald">What People Says</h2>
-              <div class="title-line-3"></div>
-            </div>
-            <div class="clearfix"></div>
-            <div id="owl-demo3" class="owl-carousel">
-              <div class="item">
-                <div class="feature-box24 two bmargin">
-                  <div class="inner"> <br/>
-                    <p class="text-light">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo Praesent mattis commodo augue Aliquam ornare hendrerit augue Suspendisse et justo. Praesent mattis.</p>
-                    <br/>
-                    <h5 class="text-white less-mar1 oswald">Madison</h5>
-                    <span class="text-orange-2">Custmoer</span> </div>
-                  <div class="image-holder">
-                    <div class="overlay"></div>
-                    <img src="http://placehold.it/600x350" alt="" class="img-responsive"/> </div>
-                </div>
-                <!--end item --> 
-              </div>
-              <!--end slide item-->
-              
-              <div class="item">
-                <div class="feature-box24 two bmargin">
-                  <div class="inner">
-                    <p class="text-light">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo Praesent mattis commodo augue Aliquam ornare hendrerit augue Suspendisse et justo. Praesent mattis.</p>
-                    <br/>
-                    <h5 class="text-white less-mar1 oswald">Madison</h5>
-                    <span class="text-orange-2">Custmoer</span> </div>
-                  <div class="image-holder">
-                    <div class="overlay"></div>
-                    <img src="http://placehold.it/600x350" alt="" class="img-responsive"/> </div>
-                </div>
-                <!--end item --> 
-              </div>
-              <!--end slide item--> 
-            </div>
-          </div>
-          <!--end item--> 
-          
-        </div>
-      </div>
-      <div class="top-shape2 red"></div>
-    </div>
-  </section>
-  <!--end section-->
   <div class="clearfix"></div>
   <section class="section-red">
     <div class="container">

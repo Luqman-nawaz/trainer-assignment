@@ -4,7 +4,7 @@
       <div class="row">
       
       <div class="col-md-3 clearfix">
-          <div class="footer-logo"><img src="images/flogo.png" alt=""/></div>
+          <div class="footer-logo"><h2 style="color:white;">GYM Trainer</h2></div>
           <ul class="address-info">
             <li>Address: No.28 - 63739 street lorem ipsum City, Country</li>
             <li><i class="fa fa-home"></i> Phone: + 1 (234) 567 8901</li>
@@ -12,6 +12,14 @@
             <li><i class="fa fa-fax"></i> Fax: + 1 (234) 567 8901</li>
             <li class="last"><i class="fa fa-envelope"></i> Email: support@yoursite.com </li>
           </ul>
+        </div>
+        <!--end item-->
+        
+        <div class="col-md-3 clearfix">
+        </div>
+        <!--end item-->
+
+        <div class="col-md-3 clearfix">
         </div>
         <!--end item-->
         
@@ -36,37 +44,6 @@
           </div>
         </div>
         <!--end item-->
-
-        <div class="col-md-3 clearfix">
-          <div class="item-holder">
-            <h4 class="uppercase footer-title less-mar3 oswald">Opening Hours </h4>
-            <div class="clearfix"></div>
-            <div class="footer-title-bottomstrip"></div>
-            <div class="clearfix"></div>
-            
-			 <ul class="opening-list">
-            <li><span class="pull-left">Monday</span> <span class="pull-right">06.00 - 22.00</span></li>
-            <div class="clearfix"></div>
-            <li><span class="pull-left">Monday</span> <span class="pull-right">06.00 - 22.00</span></li>
-            <li><span class="pull-left">Tuesday </span> <span class="pull-right">06.00 - 22.00</span></li>
-            <li><span class="pull-left">Wednesday</span> <span class="pull-right">06.00 - 22.00</span></li>
-            <li><span class="pull-left">Thursday</span> <span class="pull-right">06.00 - 22.00</span></li>
-            <li><span class="pull-left">Friday - Saturday</span> <span class="pull-right">06.00 - 22.00</span></li>
-            
-          </ul>
-            
-            
-          </div>
-        </div>
-        <!--end item-->
-        
-        <div class="col-md-3 clearfix">
-          <h4 class="uppercase footer-title less-mar3 oswald">Flickr Gallery</h4>
-          <div class="clearfix"></div>
-          <div class="footer-title-bottomstrip"></div>
-          <ul id="basicuse" class="thumbs">
-          </ul>
-        </div>
         <!--end item--> 
         
       </div>
@@ -78,7 +55,7 @@
   <section class="section-copyrights sec-moreless-padding">
     <div class="container">
       <div class="row">
-        <div class="col-md-12"> <span>Copyright © 2019 <a href="https://1.envato.market/hasta-html-by-codelayers">hasta</a> By <a href="https://1.envato.market/codelayers">Codelayers</a> | All rights reserved.</span></div>
+        <div class="col-md-12"> <span>GYM Trainers</a> | All rights reserved.</span></div>
       </div>
     </div>
   </section>

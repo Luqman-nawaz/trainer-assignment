@@ -2,8 +2,6 @@
     <div class="container">
       <div class="topbar-left-items">
         <ul class="toplist toppadding pull-left paddtop1">
-          <li class="rightl">test</li>
-          <li>text</li>
         </ul>
       </div>
       <!--end left-->
@@ -27,13 +25,13 @@
       <div class="navbar navbar-default red yamm fulldark">
         <div class="navbar-header">
           <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle two"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-          <a href="index.php" class="navbar-brand"><img src="images/logo.png" alt=""/></a> </div>
+          <a href="index.php" class="navbar-brand" style="color:white; font-size:25px; margin-top:10px;">GYM Trainer</a> </div>
         <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
           <ul class="nav red navbar-nav">
             <li> <a href="index.php" class="dropdown-toggle active">Home</a></li>
             <li> <a href="classes.php" class="dropdown-toggle">Trainer's Classes</a></li>
             <li> <a href="user/register.php" class="dropdown-toggle">User Registration</a></li>
-            <li> <a href="user/login.php" class="dropdown-toggle">User Login</a></li>
+            <li> <a href="user/index.php" class="dropdown-toggle">User Dashboard</a></li>
           </ul>
         </div>
       </div>
