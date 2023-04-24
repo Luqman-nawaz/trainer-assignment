@@ -49,12 +49,39 @@ require_once 'vendor/includes/config.php'; ?>
             <hr>
           </div>
           <div class="clearfix"></div>
-          <div class="col-md-12 col-sm-12">
+          <div class="col-md-6 col-sm-6">
             <div class="feature-box24 bmargin" style="color:white;">
                 <?= $re['class_details']; ?>
             </div>
           </div>
+
+          <div class="col-md-6 col-sm-6" style="border:solid white 1px;">
+            <div class="feature-box24 bmargin" style="color:white;">
+              <?php
+                $email = $_SESSION['useremail'];
+                $q_user_id = "SELECT * FROM `users` WHERE `email` = '$email'";
+                $r_user_id = mysqli_query($con, $q_user_id);
+                $re_user_id = mysqli_fetch_assoc($r_user_id);
+                $user_id = $re_user_id['id'];
+
+                $q_messages = "SELECT * FROM `messages` WHERE `user_id` = '$user_id' && `class_id` = '$id'";
+                $r_messages = mysqli_query($con, $q_messages);
+                while($re_messages = mysqli_fetch_assoc($r_messages)){
+              ?>
+                <p><small></small> <?= $re_messages['message']; ?></p>
+              <?php } ?>
+              
+              <form action="send_message.php" method="post">
+                  <input type="text" style="display:none;" name="tutor_id" value="<?= $re['trainer_id']; ?>"/>
+                  <input type="text" style="display:none;" name="class_id" value="<?= $id; ?>"/>
+                  <input class="form-control" style="margin-bottom:10px;" name="message" type="text" placeholder="Write your message">
+                  <button type="submit" style="margin-bottom:10px;" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+          </div>
           <!--end item -->
+
+
 
         </div>
       </div>
