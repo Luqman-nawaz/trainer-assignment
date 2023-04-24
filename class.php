@@ -29,7 +29,24 @@ require_once 'vendor/includes/config.php'; ?>
           <div class="col-sm-12 text-left">
             <h1 class="section-title-3 text-white uppercase oswald"><?= $re['class_name']; ?></h1>
             <p style="color:white;"><?= $re['class_duration']; ?></p>
-            <div class="title-line-3"></div>
+            <hr>
+            <form action="add_rating.php" method="post">
+              <input type="text" style="display:none;" name="tutor_id" value="<?= $re['trainer_id']; ?>"/>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Rate the Trainer
+                <select class="form-control" name="rating" id="exampleFormControlSelect1">
+                  <option value="1">⭐</option>
+                  <option value="2">⭐⭐</option>
+                  <option value="3">⭐⭐⭐</option>
+                  <option value="4">⭐⭐⭐⭐</option>
+                  <option value="5">⭐⭐⭐⭐⭐</option>
+                </select>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit Rating</button>
+            </form>
+
+            <hr>
           </div>
           <div class="clearfix"></div>
           <div class="col-md-12 col-sm-12">
@@ -38,7 +55,7 @@ require_once 'vendor/includes/config.php'; ?>
             </div>
           </div>
           <!--end item -->
-          
+
         </div>
       </div>
       <div class="top-shape2"></div>

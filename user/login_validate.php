@@ -62,7 +62,7 @@
 
 			$_SESSION['userpassword'] = $userpass;
 
-			header("location:index.php?done");
+			header("location:index.php?done=Login Successful");
 
     	}else{
 

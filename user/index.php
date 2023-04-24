@@ -42,7 +42,7 @@ session_start();
 
           <h4 class="mb-2 mb-sm-0 pt-1" style="color: green;">
 
-            Login Successful
+            <?= $_GET['done']; ?>
 
           </h4>
 
