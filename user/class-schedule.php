@@ -6,6 +6,8 @@ session_start();
 
     include_once 'vendor/includes/head.php';
 
+	require_once 'vendor/includes/function.php';
+
     include_once 'vendor/includes/nav.php';
 
     require_once 'vendor/includes/config.php';
@@ -16,7 +18,27 @@ session_start();
 
     	<div class="container-fluid mt-5">
 
+		<?php if(checkVerification() == false){ ?> 
+        <div class="container pt-3">
 
+          <div class="alert alert-danger fade show" role="alert">
+
+          <div class="p-a-15">
+
+            <h4>Looks Like You're not Verified!</h4>
+
+            <p class="m-b-20">Please Check your Email for the verification code. Also make sure to check the Spam/Junk folder of your Email as Mails are sometimes caught in the Spam filters.</p>
+
+            <a href="verify.php"><button type="button" class="btn btn-danger">Verify Account</button></a>
+
+            <a href="resend_vercode.php"><button type="button" class="btn btn-dark">Resend Verification Email</button></a>
+
+          </div>
+
+          </div>
+
+          </div>
+      <?php }else{ ?>
 
     	<div class="container-fluid mt-5">
 
@@ -54,6 +76,10 @@ session_start();
 			      </th>
 
                   <th class="th-sm">Next Class Date
+
+			      </th>
+
+				  <th class="th-sm">Class Timing
 
 			      </th>
 
@@ -95,6 +121,8 @@ session_start();
 
                   <td><?php echo date('Y-m-d') ?></td>
 
+				  <td><?php echo $re['class_duration']; ?></td>
+
 			      <td><a href="remove_class.php?id=<?php echo $re['id']; ?>&userid=<?= $user_id; ?>"><button class="btn btn-danger btn-sm">Remove</button></td>
 
                   <td><a href="../class.php?id=<?php echo $re['id']; ?>"><button class="btn btn-success btn-sm">View Class</button></td>
@@ -110,6 +138,7 @@ session_start();
 		</div>
 
 	</main>
+	<?php } ?>
 
 	<script type="text/javascript">
 

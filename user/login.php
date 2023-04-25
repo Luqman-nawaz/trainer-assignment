@@ -74,13 +74,19 @@ position:absolute;
 
         <div class="card">
 
+          <div class="row mt-3">
+              <div class="col-4"></div>
+              <a href="../"><label><button class="form-control btn-danger center-block"> ⬅ Go Back </button></label></a>
+          </div>
+
           <div class="container">
+            
 
             <br>
 
             <?php if(isset($_GET['err'])){ ?><div class="alert alert-danger" style="text-align: center;"><i class="fas fa-exclamation-triangle"></i>&nbsp;Wrong Username or Password</div><?php } ?>
             <?php if(isset($_GET['done'])){ ?><div class="alert alert-success" style="text-align: center;"><i class="fas fa-exclamation-triangle"></i>&nbsp;<?= $_GET['done']; ?></div><?php } ?>
-
+            <h3 class="text-center">User Login </h3>
             <form action="login_validate.php" method="post" style="padding-top: 30px;">
 
               <div class="row">
@@ -132,6 +138,10 @@ position:absolute;
             </div>
 
             </form>
+            
+            <div class="container d-flex justify-content-center">
+              <a href="register.php"><label><button class="form-control btn-info center-block"> Don't have an account? Register here! </button></label></a>
+            </div>
 
         </div>
 

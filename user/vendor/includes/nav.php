@@ -50,6 +50,12 @@
 
           <ul class="navbar-nav mr-auto">
 
+              <li class="nav-item">
+
+                <a class="nav-link waves-effect" href="../" >Find Classes</a>
+
+              </li>
+
           </ul>
 
 
@@ -86,12 +92,8 @@
 
           </ul>
 
-
-
         </div>
-
-
-
+ 
       </div>
 
     </nav>

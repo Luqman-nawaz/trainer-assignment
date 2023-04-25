@@ -1,99 +1,48 @@
 <?php
 
-	//checking post request
+session_start();
 
-		if(!$_SERVER['REQUEST_METHOD'] == 'POST'){
+if(!$_SESSION['useremail'] && $_SESSION['userpassword']){
 
-            header('location:logout.php');
+	header("location:../");
 
-		}
+}
 
+//Database connection
 
+require_once 'vendor/includes/config.php';
 
-			//database connection
+$email = $_SESSION['useremail'];
+$q_user_id = "SELECT * FROM `users` WHERE `email` = '$email'";
+$r_user_id = mysqli_query($con, $q_user_id);
+$re_user_id = mysqli_fetch_assoc($r_user_id);
+$user_id = $re_user_id['id'];
 
-			require_once 'vendor/includes/config.php';
+$status = 0;
 
+$q = "SELECT `ver_code` FROM `user_verification` WHERE `user_id` = ? && `status` = ?;";
 
+$statement = mysqli_stmt_init($con);
 
-			//checking inputs
-    			if(empty($_POST['email']) OR empty($_POST['userpass']) OR empty($_POST['name']) OR empty($_POST['userimage'])){
+if(!mysqli_stmt_prepare($statement, $q)){
 
-    				header("location:register.php?err=Empty Details");
+	die();
 
-    			}
-			
-			
+}
 
-			
+mysqli_stmt_bind_param($statement, "ii", $user_id, $status);
 
-			//games table
-            $email = $_POST['email'];
+mysqli_stmt_execute($statement);
 
-            $password = password_hash($_POST['userpass'], PASSWORD_BCRYPT);
+$result = mysqli_stmt_get_result($statement);
 
-			$name = $_POST['name'];
+$row = mysqli_fetch_assoc($result);
 
-			$created_at = date("Y-m-d H:i:s");
+$code = $row['ver_code'];
 
-			$updated_at = date("Y-m-d H:i:s");
+//send an email with verification codes
 
-			$vercode = rand(0,999999);
-			$status = 0;
-			
-
-			//processing image with name convert to microseconds
-
-			$uploaddir = "../images/users";
-
-		    $temp = explode(".", $_FILES["featured_image"]["name"]);
-
-		    $rounded = round(microtime(true));
-
-		    $newfilename = $_FILES["featured_image"]["name"] . '-' . $rounded . '.' . end($temp);
-
-		    move_uploaded_file($_FILES["featured_image"]["tmp_name"], $uploaddir . $newfilename);
-
-			
-            $q = "INSERT INTO `users` (`email`, `password`, `name`, `profile_picture`, `created_at`, `updated_at`) VALUES (?,?,?,?,?,?);";
-
-		    $statement = mysqli_stmt_init($con);
-
-		    if(!mysqli_stmt_prepare($statement, $q)){
-
-		    	header("location:register.php?err=Some serious error occured!");
-
-		    	die();
-
-		    }
-
-		    mysqli_stmt_bind_param($statement, "ssssss", $email, $password, $name, $newfilename, $created_at, $updated_at);
-
-		    if(mysqli_stmt_execute($statement)){
-
-				$user_id = mysqli_insert_id($con);
-
-				$q_v = "INSERT INTO `user_verification`(`user_id`, `ver_code`, `status`) VALUES (?,?,?);";
-
-				$statement_v = mysqli_stmt_init($con);
-
-				if(!mysqli_stmt_prepare($statement_v, $q_v)){
-
-					echo "Verification query error";
-
-				}
-
-				mysqli_stmt_bind_param($statement_v, "iii", $user_id, $vercode, $status);
-
-				if(!mysqli_stmt_execute($statement_v)){
-					
-					header("location:register.php?err=Some serious error occured!");
-
-					die();
-
-				}
-				
-				$from = 'Registration@gamewrap.net'; 
+$from = 'registration@gamewrap.net'; 
 
 $fromName = 'Game Wrap'; 
 
@@ -427,7 +376,7 @@ body {font-family: Muli, sans-serif;}
 
                 <td align="center" bgcolor="#ffbe00" class="inner-td" style="border-radius:6px; font-size:16px; text-align:center; background-color:inherit;">
 
-                  <a href="#" style="background-color:#ffbe00; border:1px solid #ffbe00; border-color:#ffbe00; border-radius:0px; border-width:1px; color:#000000; display:inline-block; font-size:14px; font-weight:normal; letter-spacing:0px; line-height:normal; padding:12px 40px 12px 40px; text-align:center; text-decoration:none; border-style:solid; font-family:inherit;">' . $vercode . '</a>
+                  <a href="#" style="background-color:#ffbe00; border:1px solid #ffbe00; border-color:#ffbe00; border-radius:0px; border-width:1px; color:#000000; display:inline-block; font-size:14px; font-weight:normal; letter-spacing:0px; line-height:normal; padding:12px 40px 12px 40px; text-align:center; text-decoration:none; border-style:solid; font-family:inherit;">' . $code . '</a>
 
                 </td>
 
@@ -521,30 +470,24 @@ body {font-family: Muli, sans-serif;}
 
 </body></html>'; 
 
-        // Set content-type header for sending HTML email 
+ 
 
-        $headers = "MIME-Version: 1.0" . "\r\n"; 
+// Set content-type header for sending HTML email 
 
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n"; 
+$headers = "From: registration@gamewrap.net" . "\r\n" .
 
-         
+"CC: somebodyelse@example.com";
 
-        // Additional headers 
 
-        $headers .= 'From: '.$fromName.'<'.$from.'>' . "\r\n"; 
 
-         
+// Send email 
 
-        // Send email 
+if(mail($mail, $subject, $reply, $headers)){ 
 
-        mail($mail, $subject, $reply, $headers);
+    header("location:verify.php?send");
 
-		        header('location:login.php?done=Registered Sucessfully, Please Login!');
+}else{ 
 
-		    }else{
+   header("location:index.php?err");
 
-                header("location:register.php?err=Failed to register");
-
-            }
-
-	?>
+}

@@ -76,10 +76,13 @@ position:absolute;
 
           <div class="container">
 
-            <br>
+		  <div class="row mt-3">
+              <div class="col-3"></div>
+              <a href="../"><label><button class="form-control btn-danger center-block"> ⬅ Go Back </button></label></a>
+          </div>
 
             <?php if(isset($_GET['err'])){ ?><div class="alert alert-danger" style="text-align: center;"><i class="fas fa-exclamation-triangle"></i>&nbsp;<?= $_GET['err']; ?></div><?php } ?>
-
+			<h3 class="text-center">Trainer Registration </h3>
             <form action="register_trainer.php" enctype="multipart/form-data" method="post" style="padding-top: 30px;">
 
               <div class="row">
@@ -90,7 +93,7 @@ position:absolute;
 
 	                  <label for="email">Email</label>
 
-	                  <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+	                  <input type="email" class="form-control" name="email" id="email" placeholder="Email">
 
 	            	</div>
 
@@ -163,6 +166,10 @@ position:absolute;
             </div>
 
             </form>
+
+			<div class="container d-flex justify-content-center">
+				<a href="login.php"><label><button class="form-control btn-info center-block"> Already Registered? Login here! </button></label></a>
+			</div>
 
         </div>
 

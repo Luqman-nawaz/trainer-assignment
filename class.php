@@ -25,6 +25,7 @@ require_once 'vendor/includes/config.php'; ?>
   <section class="section">
     <div class="section-overlay bg-opacity-7">
       <div class="container sec-tpadding-4 shape-bpadding2">
+        <img src="images/classes/<?= $re['class_picture']; ?>" class="img-fluid rounded mx-auto d-block" style="margin-bottom:25px; width:1180px; height:720px;" alt="Responsive image" />
         <div class="row">
           <div class="col-sm-12 text-left">
             <h1 class="section-title-3 text-white uppercase oswald"><?= $re['class_name']; ?></h1>

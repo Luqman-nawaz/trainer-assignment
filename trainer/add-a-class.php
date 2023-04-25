@@ -72,8 +72,13 @@ session_start();
                 <div class="form-group col-md-4">
 
                   <label for="password">Duration</label>
-
-                  <input type="password" class="form-control" name="class_duration" id="password" placeholder="Duration">
+                  <select name="class_duration" class="form-control">
+                    <option value="1 Hour">1 Hour</option>
+                    <option value="2 Hour">2 Hour</option>
+                    <option value="3 Hour">3 Hour</option>
+                    <option value="4 Hour">4 Hour</option>
+                    <option value="5 Hour">5 Hour</option>
+                  </select>
 
                 </div>
 

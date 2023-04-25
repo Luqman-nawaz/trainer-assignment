@@ -74,17 +74,20 @@ position:absolute;
 
         <div class="card">
 
-          <div class="container">
-
           <div class="row mt-3">
-              <div class="col-3"></div>
+              <div class="col-4"></div>
               <a href="../"><label><button class="form-control btn-danger center-block"> ⬅ Go Back </button></label></a>
           </div>
 
+          <div class="container">
+            
+
+            <br>
+
             <?php if(isset($_GET['err'])){ ?><div class="alert alert-danger" style="text-align: center;"><i class="fas fa-exclamation-triangle"></i>&nbsp;Wrong Username or Password</div><?php } ?>
             <?php if(isset($_GET['done'])){ ?><div class="alert alert-success" style="text-align: center;"><i class="fas fa-exclamation-triangle"></i>&nbsp;<?= $_GET['done']; ?></div><?php } ?>
-            <h3 class="text-center">Trainer Login </h3>
-            <form action="login_validate.php" method="post" style="padding-top: 30px;">
+            <h3 class="text-center">User Verification </h3>
+            <form action="user_verification.php" method="post" style="padding-top: 30px;">
 
               <div class="row">
 
@@ -92,25 +95,9 @@ position:absolute;
 
 	              	<div class="col-6">
 
-	                  <label for="email">Email</label>
+	                  <label for="email">Verification Code</label>
 
-	                  <input type="text" class="form-control" name="email" id="email" placeholder="Email">
-
-	            	</div>
-
-	            	<div class="col-3"></div>
-
-            	</div>
-
-                <div class="row pt-4">
-
-              		<div class="col-3"></div>
-
-	              	<div class="col-6">
-
-	                  <label for="userpass">Password</label>
-
-	                  <input type="password" class="form-control" name="userpass" id="userpass" placeholder="Password">
+	                  <input type="text" class="form-control" name="ver_code" id="email" placeholder="Enter Verification Code">
 
 	            	</div>
 
@@ -124,7 +111,7 @@ position:absolute;
 
 	              	<div class="col-6">
 
-	                  <input type="submit" class="form-control btn-success"value="Login">
+	                  <input type="submit" class="form-control btn-success" value="Verify Account">
 
 	            	</div>
 
@@ -135,9 +122,9 @@ position:absolute;
             </div>
 
             </form>
-
+            
             <div class="container d-flex justify-content-center">
-              <a href="register.php"><label><button class="form-control btn-info center-block"> Don't have an account? Register here! </button></label></a>
+              <a href="index.php"><label><button class="form-control btn-info center-block"> Go to Dashboard </button></label></a>
             </div>
 
         </div>
