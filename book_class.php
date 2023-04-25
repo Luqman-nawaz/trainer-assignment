@@ -2,11 +2,15 @@
 
 	//checking post request
 
-	    session_start();
+	    	session_start();
 
-            if(!$_SESSION['useremail'] && !$_SESSION['userpassword']){
-                header('user/register.php');
+            if(!isset($_SESSION['useremail'])){
+                header('location:user/register.php');
             }
+
+			if(!isset($_SESSION['userpassword'])){
+				header('location:user/register.php');
+			}
 
 			//database connection
 

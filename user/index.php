@@ -132,11 +132,11 @@ session_start();
 
             <!-- Card image -->
 
-                <a href="#" class="btn btn-primary" target="_blank">
+                <a href="#" target="_blank">
 
               <img class="card-img-top" src="../images/classes/<?php echo $re['class_picture']; ?>"
 
-                alt="Card image cap">
+                alt="Card image cap" style="width:346px; height:200px;">
 
               </a>
 

@@ -130,10 +130,6 @@
 
          <i class="fas fa-user-shield"></i> &nbsp; Manage Classes</a>
 
-         <a href="select-mg-games.php" class="list-group-item list-group-item-action waves-effect">
-
-          <i class="fas fa-gamepad"></i> &nbsp; View Schedule</a>
-
         <a href="mg-account.php" class="list-group-item list-group-item-action waves-effect">
 
           <i class="fas fa-book"></i> &nbsp; Manage Account</a>

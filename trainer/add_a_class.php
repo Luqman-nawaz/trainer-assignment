@@ -26,10 +26,6 @@
     				header("location:add-a-game.php?empty");
 
     			}
-			
-			
-
-			
 
 			//games table
             $email = $_SESSION['email'];
