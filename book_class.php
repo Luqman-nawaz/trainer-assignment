@@ -26,6 +26,14 @@
 
 			$class_id = $_GET['classid'];
 
+			$check_q = "SELECT * FROM `user_classes` WHERE `class_id` = '$class_id' && `user_id` = '$user_id'";
+			$check_r = mysqli_query($con, $check_q);
+
+			if(mysqli_num_rows($check_r) > 0){
+				header('location:user/mg-classes.php?err=Class Already enrolled');
+				die();
+			}
+
 			//processing image with name convert to microseconds
 
 			$q = "INSERT INTO `user_classes` (`user_id`, `class_id`) VALUES (?,?);";

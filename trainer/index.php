@@ -129,7 +129,7 @@ session_start();
 
               <!-- Button -->
 
-              <a href="#" class="btn btn-primary" target="_blank">View Class</a>
+              <a href="../class.php?id=<?= $re['id']; ?>" class="btn btn-primary" target="_blank">View Class</a>
 
 
 

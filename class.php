@@ -40,7 +40,7 @@ require_once 'vendor/includes/config.php'; ?>
                   <option value="2">⭐⭐</option>
                   <option value="3">⭐⭐⭐</option>
                   <option value="4">⭐⭐⭐⭐</option>
-                  <option value="5">⭐⭐⭐⭐⭐</option>
+                  <option value="5" selected>⭐⭐⭐⭐⭐</option>
                 </select>
                 </label>
               </div>
@@ -55,7 +55,7 @@ require_once 'vendor/includes/config.php'; ?>
                 <?= $re['class_details']; ?>
             </div>
           </div>
-
+          
           <div class="col-md-6 col-sm-6" style="border:solid white 1px;">
             <div class="feature-box24 bmargin" style="color:white;">
               <?php
@@ -81,7 +81,33 @@ require_once 'vendor/includes/config.php'; ?>
             </div>
           </div>
           <!--end item -->
+          
 
+          <div class="col-md-12 col-sm-6" style="border:solid white 1px; margin-top:20px;">
+                  <h3 class="text-center text-white mt-1" > Trainer Ratings </h3>
+            <?php
+              $trainer_id = $re['trainer_id'];
+              $q_rating = "SELECT * FROM `trainer_rating` INNER JOIN `users` on `trainer_rating`.user_id = `users`.id WHERE `trainer_id` = '$trainer_id'";
+              $r_rating = mysqli_query($con, $q_rating);
+              if(mysqli_num_rows($r_rating) < 1){
+                  echo "No Rating yet";
+              }else{
+                while($re_rating = mysqli_fetch_assoc($r_rating)){
+                  ?>
+                  <div class="card" style="border:solid white 1px; margin:20px; padding:20px;">
+                    <div class="card-body">
+                      <?= $re_rating['name']; ?>: <?php if($re_rating['rating'] == 1){ echo "⭐"; } ?>
+                      <?php if($re_rating['rating'] == 2){ echo "⭐⭐"; } ?>
+                      <?php if($re_rating['rating'] == 3){ echo "⭐⭐⭐"; } ?>
+                      <?php if($re_rating['rating'] == 4){ echo "⭐⭐⭐⭐"; } ?>
+                      <?php if($re_rating['rating'] == 5){ echo "⭐⭐⭐⭐⭐"; } ?>
+                    </div>
+                  </div>
+                  <?php
+                }
+              }
+            ?>
+          </div>
 
 
         </div>
@@ -92,7 +118,7 @@ require_once 'vendor/includes/config.php'; ?>
   <!--end section-->
 
   <!--end section-->
-  
+   
   <?php require 'vendor/includes/footer.php'; ?>
 </body>
 </html>

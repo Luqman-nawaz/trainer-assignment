@@ -35,7 +35,7 @@ require_once 'vendor/includes/config.php'; ?>
             while($re = mysqli_fetch_assoc($r)){
         ?>
         <div class="col-md-4 col-sm-6 bmargin m-1" style="margin-right:5px;">
-          <div class="image-holder"><img src="images/classes/<?= $re['class_picture']; ?>" alt="" class="img-responsive"/></div>
+          <div class="image-holder"><img src="images/classes/<?= $re['class_picture']; ?>" alt="" style="width:250px; height:250px;" class="img-responsive"/></div>
         <h3 class="section-title text-left oswald margin-top3"><?= $re['class_name']; ?></h3>
           <h6>By: <?= $re['name']; ?> </h6>
           <p>Length: <?= $re['class_duration']; ?></p 
