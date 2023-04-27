@@ -56,9 +56,10 @@ require_once 'vendor/includes/config.php'; ?>
             </div>
           </div>
           
-          <div class="col-md-6 col-sm-6" style="border:solid white 1px;">
+          <div class="col-md-6 col-sm-6" id="chat" style="border:solid white 1px;">
             <div class="feature-box24 bmargin" style="color:white;">
               <?php
+              if(isset($_SESSION['useremail'])){
                 $email = $_SESSION['useremail'];
                 $q_user_id = "SELECT * FROM `users` WHERE `email` = '$email'";
                 $r_user_id = mysqli_query($con, $q_user_id);
@@ -66,13 +67,22 @@ require_once 'vendor/includes/config.php'; ?>
                 $user_id = $re_user_id['id'];
 
                 $q_messages = "SELECT * FROM `messages` WHERE `user_id` = '$user_id' && `class_id` = '$id'";
+              }else if(isset($_SESSION['email'])){
+                $email = $_SESSION['email'];
+                $q_user_id = "SELECT * FROM `trainers` WHERE `email` = '$email'";
+                $r_user_id = mysqli_query($con, $q_user_id);
+                $re_user_id = mysqli_fetch_assoc($r_user_id);
+                $user_id = $re_user_id['id'];
+
+                $q_messages = "SELECT * FROM `messages` WHERE `trainer_id` = '$user_id' && `class_id` = '$id'";
+              }
                 $r_messages = mysqli_query($con, $q_messages);
                 while($re_messages = mysqli_fetch_assoc($r_messages)){
               ?>
-                <p><small></small> <?= $re_messages['message']; ?></p>
+                <p><small><?= $re_messages['message_by']; ?>:</small> <?= $re_messages['message']; ?></p>
               <?php } ?>
               
-              <form action="send_message.php" method="post">
+              <form action="<?php if(isset($_SESSION['useremail'])){ echo "send_message.php";}else if(isset($_SESSION['email'])){ echo "send_trainer_message.php"; } ?>" method="post">
                   <input type="text" style="display:none;" name="tutor_id" value="<?= $re['trainer_id']; ?>"/>
                   <input type="text" style="display:none;" name="class_id" value="<?= $id; ?>"/>
                   <input class="form-control" style="margin-bottom:10px;" name="message" type="text" placeholder="Write your message">
