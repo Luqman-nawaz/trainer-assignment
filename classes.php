@@ -53,7 +53,7 @@ require_once 'vendor/includes/config.php'; ?>
   <section class="section-red">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-centered text-center">
+        <div class="col-md-6 col-centered text-center" style="margin-top:15px;">
           <ul class="socialicon-big">
             <li><a class="twitter" href="https://twitter.com/codelayers"><i class="fa fa-twitter"></i></a></li>
             <li><a href="https://www.facebook.com/codelayers"><i class="fa fa-facebook"></i></a></li>

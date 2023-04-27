@@ -24,24 +24,6 @@
         <!--end item-->
         
         <div class="col-md-3 clearfix">
-          <div class="item-holder">
-            <h4 class="uppercase footer-title less-mar3 oswald">Recent Posts</h4>
-            <div class="footer-title-bottomstrip"></div>
-            <div class="clearfix"></div>
-            <div class="image-left"><img src="http://placehold.it/80x80" alt=""/></div>
-            <div class="text-box-right">
-              <h5 class="text-white less-mar3"><a href="#">Clean And Modern</a></h5>
-              <p>Lorem ipsum dolor sit</p>
-              <div class="footer-post-info"> <span>By John Doe</span><span>May 19</span> </div>
-            </div>
-            <div class="divider-line solid dark margin"></div>
-            <div class="image-left"><img src="http://placehold.it/80x80" alt=""/></div>
-            <div class="text-box-right">
-              <h5 class="text-white less-mar3"><a href="#">Layered PSD Files</a></h5>
-              <p>Lorem ipsum dolor sit</p>
-              <div class="footer-post-info"> <span>By John Doe</span><span>May 19</span> </div>
-            </div>
-          </div>
         </div>
         <!--end item-->
         <!--end item--> 
